@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ocd.ecocert.dao.CompanyMapper" >
+  <resultMap id="BaseResultMap" type="com.ocd.ecocert.entity.Company" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="test_type" property="testType" jdbcType="VARCHAR" />
+    <result column="test" property="test" jdbcType="VARCHAR" />
+    <result column="amount_receivable" property="amountReceivable" jdbcType="REAL" />
+    <result column="pay_amount" property="payAmount" jdbcType="REAL" />
+    <result column="feeler_mechanism" property="feelerMechanism" jdbcType="VARCHAR" />
+    <result column="examining_report" property="examiningReport" jdbcType="VARCHAR" />
+    <result column="developer" property="developer" jdbcType="VARCHAR" />
+    <result column="remarks" property="remarks" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, name, test_type, test, amount_receivable, pay_amount, feeler_mechanism, examining_report, 
+    developer, remarks
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ocd.ecocert.entity.CompanyExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from company
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from company
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from company
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ocd.ecocert.entity.CompanyExample" >
+    delete from company
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ocd.ecocert.entity.Company" >
+    insert into company (id, name, test_type, 
+      test, amount_receivable, pay_amount, 
+      feeler_mechanism, examining_report, developer, 
+      remarks)
+    values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{testType,jdbcType=VARCHAR}, 
+      #{test,jdbcType=VARCHAR}, #{amountReceivable,jdbcType=REAL}, #{payAmount,jdbcType=REAL}, 
+      #{feelerMechanism,jdbcType=VARCHAR}, #{examiningReport,jdbcType=VARCHAR}, #{developer,jdbcType=VARCHAR}, 
+      #{remarks,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ocd.ecocert.entity.Company" >
+    insert into company
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="testType != null" >
+        test_type,
+      </if>
+      <if test="test != null" >
+        test,
+      </if>
+      <if test="amountReceivable != null" >
+        amount_receivable,
+      </if>
+      <if test="payAmount != null" >
+        pay_amount,
+      </if>
+      <if test="feelerMechanism != null" >
+        feeler_mechanism,
+      </if>
+      <if test="examiningReport != null" >
+        examining_report,
+      </if>
+      <if test="developer != null" >
+        developer,
+      </if>
+      <if test="remarks != null" >
+        remarks,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="testType != null" >
+        #{testType,jdbcType=VARCHAR},
+      </if>
+      <if test="test != null" >
+        #{test,jdbcType=VARCHAR},
+      </if>
+      <if test="amountReceivable != null" >
+        #{amountReceivable,jdbcType=REAL},
+      </if>
+      <if test="payAmount != null" >
+        #{payAmount,jdbcType=REAL},
+      </if>
+      <if test="feelerMechanism != null" >
+        #{feelerMechanism,jdbcType=VARCHAR},
+      </if>
+      <if test="examiningReport != null" >
+        #{examiningReport,jdbcType=VARCHAR},
+      </if>
+      <if test="developer != null" >
+        #{developer,jdbcType=VARCHAR},
+      </if>
+      <if test="remarks != null" >
+        #{remarks,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ocd.ecocert.entity.CompanyExample" resultType="java.lang.Integer" >
+    select count(*) from company
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update company
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.testType != null" >
+        test_type = #{record.testType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.test != null" >
+        test = #{record.test,jdbcType=VARCHAR},
+      </if>
+      <if test="record.amountReceivable != null" >
+        amount_receivable = #{record.amountReceivable,jdbcType=REAL},
+      </if>
+      <if test="record.payAmount != null" >
+        pay_amount = #{record.payAmount,jdbcType=REAL},
+      </if>
+      <if test="record.feelerMechanism != null" >
+        feeler_mechanism = #{record.feelerMechanism,jdbcType=VARCHAR},
+      </if>
+      <if test="record.examiningReport != null" >
+        examining_report = #{record.examiningReport,jdbcType=VARCHAR},
+      </if>
+      <if test="record.developer != null" >
+        developer = #{record.developer,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remarks != null" >
+        remarks = #{record.remarks,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update company
+    set id = #{record.id,jdbcType=INTEGER},
+      name = #{record.name,jdbcType=VARCHAR},
+      test_type = #{record.testType,jdbcType=VARCHAR},
+      test = #{record.test,jdbcType=VARCHAR},
+      amount_receivable = #{record.amountReceivable,jdbcType=REAL},
+      pay_amount = #{record.payAmount,jdbcType=REAL},
+      feeler_mechanism = #{record.feelerMechanism,jdbcType=VARCHAR},
+      examining_report = #{record.examiningReport,jdbcType=VARCHAR},
+      developer = #{record.developer,jdbcType=VARCHAR},
+      remarks = #{record.remarks,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ocd.ecocert.entity.Company" >
+    update company
+    <set >
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="testType != null" >
+        test_type = #{testType,jdbcType=VARCHAR},
+      </if>
+      <if test="test != null" >
+        test = #{test,jdbcType=VARCHAR},
+      </if>
+      <if test="amountReceivable != null" >
+        amount_receivable = #{amountReceivable,jdbcType=REAL},
+      </if>
+      <if test="payAmount != null" >
+        pay_amount = #{payAmount,jdbcType=REAL},
+      </if>
+      <if test="feelerMechanism != null" >
+        feeler_mechanism = #{feelerMechanism,jdbcType=VARCHAR},
+      </if>
+      <if test="examiningReport != null" >
+        examining_report = #{examiningReport,jdbcType=VARCHAR},
+      </if>
+      <if test="developer != null" >
+        developer = #{developer,jdbcType=VARCHAR},
+      </if>
+      <if test="remarks != null" >
+        remarks = #{remarks,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ocd.ecocert.entity.Company" >
+    update company
+    set name = #{name,jdbcType=VARCHAR},
+      test_type = #{testType,jdbcType=VARCHAR},
+      test = #{test,jdbcType=VARCHAR},
+      amount_receivable = #{amountReceivable,jdbcType=REAL},
+      pay_amount = #{payAmount,jdbcType=REAL},
+      feeler_mechanism = #{feelerMechanism,jdbcType=VARCHAR},
+      examining_report = #{examiningReport,jdbcType=VARCHAR},
+      developer = #{developer,jdbcType=VARCHAR},
+      remarks = #{remarks,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

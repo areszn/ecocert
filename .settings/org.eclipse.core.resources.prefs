@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/ocd/ecocert/controller/QualificationController.java=UTF-8
+encoding//src/main/java/com/ocd/ecocert/controller/UserController.java=UTF-8
+encoding//src/main/java/com/ocd/ecocert/service/impl/QualificationServiceImpl.java=UTF-8
+encoding//src/main/java/com/ocd/ecocert/service/impl/UserServiceImpl.java=UTF-8
+encoding//src/test/java/com/ocd/ecocert/test/UserDaoTest.java=UTF-8
+encoding/<project>=UTF-8

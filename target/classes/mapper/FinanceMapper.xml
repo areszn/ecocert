@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ocd.ecocert.dao.FinanceMapper" >
+  <resultMap id="BaseResultMap" type="com.ocd.ecocert.entity.Finance" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="company" property="company" jdbcType="VARCHAR" />
+    <result column="contract_number" property="contractNumber" jdbcType="VARCHAR" />
+    <result column="charge_item" property="chargeItem" jdbcType="VARCHAR" />
+    <result column="amount_receivable" property="amountReceivable" jdbcType="REAL" />
+    <result column="income" property="income" jdbcType="REAL" />
+    <result column="description" property="description" jdbcType="VARCHAR" />
+    <result column="date" property="date" jdbcType="TIMESTAMP" />
+    <result column="arrears" property="arrears" jdbcType="REAL" />
+    <result column="owner" property="owner" jdbcType="INTEGER" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, company, contract_number, charge_item, amount_receivable, income, description, 
+    date, arrears, owner, remark
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.ocd.ecocert.entity.FinanceExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from finance
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from finance
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from finance
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ocd.ecocert.entity.FinanceExample" >
+    delete from finance
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ocd.ecocert.entity.Finance" >
+    insert into finance (id, company, contract_number, 
+      charge_item, amount_receivable, income, 
+      description, date, arrears, 
+      owner, remark)
+    values (#{id,jdbcType=INTEGER}, #{company,jdbcType=VARCHAR}, #{contractNumber,jdbcType=VARCHAR}, 
+      #{chargeItem,jdbcType=VARCHAR}, #{amountReceivable,jdbcType=REAL}, #{income,jdbcType=REAL}, 
+      #{description,jdbcType=VARCHAR}, #{date,jdbcType=TIMESTAMP}, #{arrears,jdbcType=REAL}, 
+      #{owner,jdbcType=INTEGER}, #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ocd.ecocert.entity.Finance" >
+    insert into finance
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="company != null" >
+        company,
+      </if>
+      <if test="contractNumber != null" >
+        contract_number,
+      </if>
+      <if test="chargeItem != null" >
+        charge_item,
+      </if>
+      <if test="amountReceivable != null" >
+        amount_receivable,
+      </if>
+      <if test="income != null" >
+        income,
+      </if>
+      <if test="description != null" >
+        description,
+      </if>
+      <if test="date != null" >
+        date,
+      </if>
+      <if test="arrears != null" >
+        arrears,
+      </if>
+      <if test="owner != null" >
+        owner,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="company != null" >
+        #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="contractNumber != null" >
+        #{contractNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="chargeItem != null" >
+        #{chargeItem,jdbcType=VARCHAR},
+      </if>
+      <if test="amountReceivable != null" >
+        #{amountReceivable,jdbcType=REAL},
+      </if>
+      <if test="income != null" >
+        #{income,jdbcType=REAL},
+      </if>
+      <if test="description != null" >
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null" >
+        #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="arrears != null" >
+        #{arrears,jdbcType=REAL},
+      </if>
+      <if test="owner != null" >
+        #{owner,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ocd.ecocert.entity.FinanceExample" resultType="java.lang.Integer" >
+    select count(*) from finance
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update finance
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.company != null" >
+        company = #{record.company,jdbcType=VARCHAR},
+      </if>
+      <if test="record.contractNumber != null" >
+        contract_number = #{record.contractNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.chargeItem != null" >
+        charge_item = #{record.chargeItem,jdbcType=VARCHAR},
+      </if>
+      <if test="record.amountReceivable != null" >
+        amount_receivable = #{record.amountReceivable,jdbcType=REAL},
+      </if>
+      <if test="record.income != null" >
+        income = #{record.income,jdbcType=REAL},
+      </if>
+      <if test="record.description != null" >
+        description = #{record.description,jdbcType=VARCHAR},
+      </if>
+      <if test="record.date != null" >
+        date = #{record.date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.arrears != null" >
+        arrears = #{record.arrears,jdbcType=REAL},
+      </if>
+      <if test="record.owner != null" >
+        owner = #{record.owner,jdbcType=INTEGER},
+      </if>
+      <if test="record.remark != null" >
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update finance
+    set id = #{record.id,jdbcType=INTEGER},
+      company = #{record.company,jdbcType=VARCHAR},
+      contract_number = #{record.contractNumber,jdbcType=VARCHAR},
+      charge_item = #{record.chargeItem,jdbcType=VARCHAR},
+      amount_receivable = #{record.amountReceivable,jdbcType=REAL},
+      income = #{record.income,jdbcType=REAL},
+      description = #{record.description,jdbcType=VARCHAR},
+      date = #{record.date,jdbcType=TIMESTAMP},
+      arrears = #{record.arrears,jdbcType=REAL},
+      owner = #{record.owner,jdbcType=INTEGER},
+      remark = #{record.remark,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ocd.ecocert.entity.Finance" >
+    update finance
+    <set >
+      <if test="company != null" >
+        company = #{company,jdbcType=VARCHAR},
+      </if>
+      <if test="contractNumber != null" >
+        contract_number = #{contractNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="chargeItem != null" >
+        charge_item = #{chargeItem,jdbcType=VARCHAR},
+      </if>
+      <if test="amountReceivable != null" >
+        amount_receivable = #{amountReceivable,jdbcType=REAL},
+      </if>
+      <if test="income != null" >
+        income = #{income,jdbcType=REAL},
+      </if>
+      <if test="description != null" >
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="date != null" >
+        date = #{date,jdbcType=TIMESTAMP},
+      </if>
+      <if test="arrears != null" >
+        arrears = #{arrears,jdbcType=REAL},
+      </if>
+      <if test="owner != null" >
+        owner = #{owner,jdbcType=INTEGER},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ocd.ecocert.entity.Finance" >
+    update finance
+    set company = #{company,jdbcType=VARCHAR},
+      contract_number = #{contractNumber,jdbcType=VARCHAR},
+      charge_item = #{chargeItem,jdbcType=VARCHAR},
+      amount_receivable = #{amountReceivable,jdbcType=REAL},
+      income = #{income,jdbcType=REAL},
+      description = #{description,jdbcType=VARCHAR},
+      date = #{date,jdbcType=TIMESTAMP},
+      arrears = #{arrears,jdbcType=REAL},
+      owner = #{owner,jdbcType=INTEGER},
+      remark = #{remark,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
