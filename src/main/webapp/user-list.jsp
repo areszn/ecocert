@@ -10,7 +10,7 @@
                     <a class="navbar-brand" href="#">
                         <span class="logo">ZUIAdmin</span>
                         <span class="logo-mini">ZA</span> 
-                    </a><a></a>
+                    </a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <div class="container-fluid">
