@@ -186,7 +186,7 @@
 							{emnumber: '6', name:'幻影刺客6', sex: '击杀', cardid: '斧王', phone: '幻影刺客击杀了斧王。',location:'location',isfulltime:'isfulltime',learningexperience:'learningexperience',workexperience:'workexperience',photo:
 							'photo',startdate:'startdate',enddate:'enddate'},
 							{emnumber: '7', name:'幻影刺客7', sex: '击杀', cardid: '斧王', phone: '幻影刺客击杀了斧王。',location:'location',isfulltime:'isfulltime',learningexperience:'learningexperience',workexperience:'workexperience',photo:
-							'photo',startdate:'startdate',enddate:'enddate'},
+							'photo',startdate:'startdate',enddate:'enddate'}
 						]
 						/*
 						
