@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>用户列表-页面演示 zui-admin</title>
+    <title>zui-admin</title>
     <!-- zui css -->
     <link rel="stylesheet" href="dist/css/zui.min.css">
-    <link rel="stylesheet" href="dist/theme/blue.css">
+    <%--<link rel="stylesheet" href="dist/theme/blue.css">--%>
     <!-- app css -->
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="dist/css/app.css">
     <!-- jquery js -->
     <script src="dist/lib/jquery/jquery.js"></script>
     <!-- zui js -->

@@ -172,7 +172,7 @@
 							{name: 'enddate', label: '合同到期日期', width: 109}
 						],
 						//这里先用静态数据填充。
-						array:[
+						/*array:[
 							{emnumber: '1', name:'幻影刺客1', sex: '击杀', cardid: '斧王', phone: '幻影刺客击杀了斧王。',location:'location',isfulltime:'isfulltime',learningexperience:'learningexperience',workexperience:'workexperience',photo:
 							'photo',startdate:'startdate',enddate:'enddate'},
 							{emnumber: '2', name:'幻影刺客2', sex: '击杀', cardid: '斧王', phone: '幻影刺客击杀了斧王。',location:'location',isfulltime:'isfulltime',learningexperience:'learningexperience',workexperience:'workexperience',photo:
@@ -187,21 +187,19 @@
 							'photo',startdate:'startdate',enddate:'enddate'},
 							{emnumber: '7', name:'幻影刺客7', sex: '击杀', cardid: '斧王', phone: '幻影刺客击杀了斧王。',location:'location',isfulltime:'isfulltime',learningexperience:'learningexperience',workexperience:'workexperience',photo:
 							'photo',startdate:'startdate',enddate:'enddate'}
-						]
-						/*
-						
+						]*/
+
 						//远程数据格式参见：http://zui.sexy/#view/datagrid
 						remote: function(params) {
 							return {
 								// 原创请求地址
-								url: 'docs/partial/remote-data.json',
+								url: '/user/userList.do',
 								// 请求类型
 								type: 'GET',
 								// 数据类型
 								dataType: 'json'
 							};
 						}
-						*/
 					},
 					sortable: true
 						// ... 其他初始化选项

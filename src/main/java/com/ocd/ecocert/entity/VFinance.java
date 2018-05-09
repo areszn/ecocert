@@ -2,7 +2,9 @@ package com.ocd.ecocert.entity;
 
 import java.util.Date;
 
-public class Finance {
+public class VFinance {
+    private String name;
+
     private Integer id;
 
     private String company;
@@ -26,6 +28,14 @@ public class Finance {
     private Integer owner;
 
     private String remark;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name == null ? null : name.trim();
+    }
 
     public Integer getId() {
         return id;
