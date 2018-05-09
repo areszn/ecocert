@@ -1,98 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e2aee8d8-2d05-4c34-b6b0-96ba23ac4bfd" name="Default" comment="modified jsonresult&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ocd/ecocert/controller/FinanceController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ocd/ecocert/dao/VFinanceMapper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ocd/ecocert/entity/VFinance.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ocd/ecocert/entity/VFinanceExample.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ocd/ecocert/service/FinanceService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/ocd/ecocert/service/impl/FinanceServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/controller/AbstractController.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/controller/AbstractController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/controller/CooperationController.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/controller/CooperationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/controller/QualificationController.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/controller/QualificationController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/controller/UserController.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/controller/UserController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/AuthenticationDomainMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/AuthenticationDomainMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/CompanyMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/CompanyMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/CooperationMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/CooperationMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/ExaminingReportMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/ExaminingReportMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/FeelerMechanismMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/FeelerMechanismMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/FinanceMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/FinanceMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/QualificationMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/QualificationMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/UserMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/dao/UserMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/AuthenticationDomain.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/AuthenticationDomain.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/AuthenticationDomainExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/AuthenticationDomainExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/AuthenticationDomainExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/AuthenticationDomainExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/AuthenticationDomainExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/AuthenticationDomainExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/AuthenticationDomainExample.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/AuthenticationDomainExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/Company.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/Company.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CompanyExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CompanyExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CompanyExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CompanyExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CompanyExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CompanyExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CompanyExample.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CompanyExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/Cooperation.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/Cooperation.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CooperationExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CooperationExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CooperationExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CooperationExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CooperationExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CooperationExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CooperationExample.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/CooperationExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/ExaminingReport.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/ExaminingReport.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/ExaminingReportExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/ExaminingReportExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/ExaminingReportExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/ExaminingReportExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/ExaminingReportExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/ExaminingReportExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/ExaminingReportExample.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/ExaminingReportExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FeelerMechanism.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FeelerMechanism.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FeelerMechanismExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FeelerMechanismExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FeelerMechanismExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FeelerMechanismExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FeelerMechanismExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FeelerMechanismExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FeelerMechanismExample.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FeelerMechanismExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/Finance.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/Finance.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FinanceExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FinanceExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FinanceExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FinanceExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FinanceExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FinanceExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FinanceExample.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/FinanceExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/Qualification.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/Qualification.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/QualificationExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/QualificationExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/QualificationExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/QualificationExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/QualificationExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/QualificationExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/QualificationExample.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/QualificationExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/User.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/UserExample$Criteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/UserExample$Criteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/UserExample$Criterion.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/UserExample$Criterion.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/UserExample$GeneratedCriteria.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/UserExample$GeneratedCriteria.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/UserExample.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/entity/UserExample.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/AgeException.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/AgeException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/CooperationNameException.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/CooperationNameException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/CooperationService.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/CooperationService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/IdNullException.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/IdNullException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/PasswordException.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/PasswordException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/QualificationService.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/QualificationService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/UserNameException.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/UserNameException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/UserNotFoundException.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/UserNotFoundException.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/UserService.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/impl/CooperationServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/impl/CooperationServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/impl/QualificationServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/impl/QualificationServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/service/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/util/JsonResult.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/util/JsonResult.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/util/NumberUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/util/NumberUtil.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/util/Uploader.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/util/Uploader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/web/AccessFilter.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/web/AccessFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/web/AccessIntercepter.class" afterPath="$PROJECT_DIR$/target/classes/com/ocd/ecocert/web/AccessIntercepter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/ocd/ecocert/test/BaseTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/ocd/ecocert/test/BaseTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/ocd/ecocert/test/CooperationServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/ocd/ecocert/test/CooperationServiceTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/ocd/ecocert/test/MD5Test.class" afterPath="$PROJECT_DIR$/target/test-classes/com/ocd/ecocert/test/MD5Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/ocd/ecocert/test/UserDaoTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/ocd/ecocert/test/UserDaoTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/ocd/ecocert/test/UserServiceTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/ocd/ecocert/test/UserServiceTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="e2aee8d8-2d05-4c34-b6b0-96ba23ac4bfd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/conf/ecocert.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ecocert.iml" afterPath="$PROJECT_DIR$/ecocert.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ocd/ecocert/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/ocd/ecocert/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ocd/ecocert/entity/Finance.java" afterPath="$PROJECT_DIR$/src/main/java/com/ocd/ecocert/entity/Finance.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ocd/ecocert/entity/FinanceExample.java" afterPath="$PROJECT_DIR$/src/main/java/com/ocd/ecocert/entity/FinanceExample.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/ocd/ecocert/util/JsonResult.java" afterPath="$PROJECT_DIR$/src/main/java/com/ocd/ecocert/util/JsonResult.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/user-list.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/user-list.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -111,8 +22,8 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ocd/ecocert/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1465">
-              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+            <state relative-caret-position="350">
+              <caret line="95" column="33" lean-forward="true" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -1017,7 +928,7 @@
       <workItem from="1525485241786" duration="245000" />
       <workItem from="1525485851617" duration="1497000" />
       <workItem from="1525785996438" duration="4622000" />
-      <workItem from="1525826503681" duration="6777000" />
+      <workItem from="1525826503681" duration="7063000" />
     </task>
     <task id="LOCAL-00001" summary="add zui plugin&#10;">
       <created>1525787206831</created>
@@ -1054,11 +965,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525789274445</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="merage&#10;">
+      <created>1525873308960</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1525873308960</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19125000" />
+    <option name="totallyTimeSpent" value="19411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -1084,7 +1002,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32919955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1582618" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1110,7 +1028,8 @@
     <MESSAGE value="add zui plugin&#10;    test modified" />
     <MESSAGE value="language level 8" />
     <MESSAGE value="modified jsonresult&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified jsonresult&#10;" />
+    <MESSAGE value="merage&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="merage&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1664,8 +1583,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/ocd/ecocert/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1465">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        <state relative-caret-position="350">
+          <caret line="95" column="33" lean-forward="true" selection-start-line="95" selection-start-column="33" selection-end-line="95" selection-end-column="33" />
           <folding />
         </state>
       </provider>
