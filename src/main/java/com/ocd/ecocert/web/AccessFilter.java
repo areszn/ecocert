@@ -37,7 +37,8 @@ public class AccessFilter implements Filter {
 	 */
 	private String login="/log_in.html";
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		
+/*
+
 		HttpServletRequest req=(HttpServletRequest)request;
 		HttpServletResponse res=(HttpServletResponse)response;
 		HttpSession session=req.getSession();
@@ -51,8 +52,10 @@ public class AccessFilter implements Filter {
 		// 检查用户是否登录
 		if(user==null){
 			res.sendRedirect(req.getContextPath()+login);
-			return; 
+			return;
 		}
+*/
+
 		//如果登录就放过，没登录就重定向到登录页
 		chain.doFilter(request, response);
 	}

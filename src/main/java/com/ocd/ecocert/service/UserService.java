@@ -12,4 +12,5 @@ public interface UserService {
 			throws IdNullException, PasswordException,AgeException;
 	int delete(String id);
 	List<User> selectUseList(Integer authenticationDomain,String post,String specialtyCode,String professionalLevel,Integer fulltime,String realname,String location,String workingCondition);
+	List<User> selectUseList();
 }

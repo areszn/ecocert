@@ -158,18 +158,19 @@
 				$('#datagridExample').datagrid({
 					dataSource: {
 						cols:[
-							{name: 'emnumber', label: '职工编号', width: 132},
-							{name: 'name', label: '姓名', width: 134},
-							{name: 'sex', label: '性别', width: 109},
-							{name: 'cardid', label: '身份证号', width: 109},
+							{name: 'id', label: '职工编号', width: 132},
+							{name: 'name', label: '用户名', width: 134},
+                            {name: 'realname', label: '姓名', width: 134},
+							{name: 'gender', label: '性别', width: 109},
+							{name: 'idNumber', label: '身份证号', width: 109},
 							{name: 'phone', label: '联系电话', width: 132},
 							{name: 'location', label: '所在地', width: 134},
-							{name: 'isfulltime', label: '是否专职', width: 109},
-							{name: 'learningexperience', label: '学习经历（学历、专业）', width: 109},
-							{name: 'workexperience', label: '工作经历', width: 132},
+							{name: 'fulltime', label: '是否专职', width: 109},
+							{name: 'education', label: '学习经历（学历、专业）', width: 109},
+							{name: 'workExperience', label: '工作经历', width: 132},
 							{name: 'photo', label: '照片', width: 134},
-							{name: 'startdate', label: '合同开始日期', width: 109},
-							{name: 'enddate', label: '合同到期日期', width: 109}
+							{name: 'hiredate', label: '合同开始日期', width: 109},
+							{name: 'leavedate', label: '合同到期日期', width: 109}
 						],
 						//这里先用静态数据填充。
 						/*array:[

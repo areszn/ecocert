@@ -194,6 +194,10 @@ public class UserServiceImpl implements UserService{
 		List<User> userList=userDao.selectByExample(example);
 		return userList;
 	}
-	
+	public List<User> selectUseList() {
+		UserExample example=new UserExample();
+		List<User> userList=userDao.selectByExample(example);
+		return userList;
+	}
 
 }

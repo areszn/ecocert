@@ -86,10 +86,14 @@ public class UserController extends AbstractController {
 		}*/
 
 	@RequestMapping("/userList.do")
-	//@ResponseBody
-	public String userList(){
+	@ResponseBody
+	public JsonResult userList(){
 
-		return "{    \"result\": \"success\",    \"data\": [\t{emnumber: \"1\", name:\"幻影刺客1\", sex: \"击杀\", cardid: \"斧王\", phone: \"幻影刺客击杀了斧王。\",location:\"location\",isfulltime:\"isfulltime\",learningexperience:\"learningexperience\",workexperience:\"workexperience\",photo:\t\t\t\t\t\t\t\"photo\",startdate:\"startdate\",enddate:\"enddate\"},\t\t\t\t\t\t\t{emnumber: \"2\", name:\"幻影刺客2\", sex: \"击杀\", cardid: \"斧王\", phone: \"幻影刺客击杀了斧王。\",location:\"location\",isfulltime:\"isfulltime\",learningexperience:\"learningexperience\",workexperience:\"workexperience\",photo:\t\t\t\t\t\t\t\"photo\",startdate:\"startdate\",enddate:\"enddate\"},\t\t\t\t\t\t\t{emnumber: \"3\", name:\"幻影刺客3\", sex: \"击杀\", cardid: \"斧王\", phone: \"幻影刺客击杀了斧王。\",location:\"location\",isfulltime:\"isfulltime\",learningexperience:\"learningexperience\",workexperience:\"workexperience\",photo:\t\t\t\t\t\t\t\"photo\",startdate:\"startdate\",enddate:\"enddate\"},\t\t\t\t\t\t\t{emnumber: \"4\", name:\"幻影刺客4\", sex: \"击杀\", cardid: \"斧王\", phone: \"幻影刺客击杀了斧王。\",location:\"location\",isfulltime:\"isfulltime\",learningexperience:\"learningexperience\",workexperience:\"workexperience\",photo:\t\t\t\t\t\t\t\"photo\",startdate:\"startdate\",enddate:\"enddate\"},\t\t\t\t\t\t\t{emnumber: \"5\", name:\"幻影刺客5\", sex: \"击杀\", cardid: \"斧王\", phone: \"幻影刺客击杀了斧王。\",location:\"location\",isfulltime:\"isfulltime\",learningexperience:\"learningexperience\",workexperience:\"workexperience\",photo:\t\t\t\t\t\t\t\"photo\",startdate:\"startdate\",enddate:\"enddate\"},\t\t\t\t\t\t\t{emnumber: \"6\", name:\"幻影刺客6\", sex: \"击杀\", cardid: \"斧王\", phone: \"幻影刺客击杀了斧王。\",location:\"location\",isfulltime:\"isfulltime\",learningexperience:\"learningexperience\",workexperience:\"workexperience\",photo:\t\t\t\t\t\t\t\"photo\",startdate:\"startdate\",enddate:\"enddate\"},\t\t\t\t\t\t\t{emnumber: \"7\", name:\"幻影刺客7\", sex: \"击杀\", cardid: \"斧王\", phone: \"幻影刺客击杀了斧王。\",location:\"location\",isfulltime:\"isfulltime\",learningexperience:\"learningexperience\",workexperience:\"workexperience\",photo:\t\t\t\t\t\t\t\"photo\",startdate:\"startdate\",enddate:\"enddate\"}    ],    \"message\": \"\",    \"pager\": {        \"page\": 1,                  \"recTotal\": 1001,            \"recPerPage\": 10,        }}";
+		List<User> users = userService.selectUseList();
+		JsonResult jr =new JsonResult();
+		jr.setData(users);
+
+		return jr;
 
 	}
 
